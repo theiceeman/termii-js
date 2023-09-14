@@ -1,10 +1,17 @@
 import { describe, expect, test } from '@jest/globals';
 import Termii from '../termii';
+import dotenv from "dotenv";
+dotenv.config()
 
-const API_KEY = "TLMej43lqxW7OWT6ArPvohmFt2izmVl7gvSyLMMPgaBPAjF5EaEklwgeb5P2h0"
+const API_KEY = process.env.API_KEY
 const SENDER_ID = "offnet"
-const termii = new Termii(API_KEY, SENDER_ID)
 
+let termii: Termii;
+if (API_KEY) {
+  termii = new Termii(API_KEY, SENDER_ID);
+} else {
+  throw new Error("API_KEY is not defined. Cannot create Termii instance.");
+}
 
 
 describe('Termii GET endpoints', () => {
