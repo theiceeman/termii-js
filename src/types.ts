@@ -1,3 +1,6 @@
+export type iChannel = 'dnd' | 'whatsapp' | 'generic'
+export type iMessageType = 'ALPHANUMERIC' | 'NUMERIC'
+
 export type iRequestSenderId = {
     usecase: string
     company: string
@@ -10,7 +13,7 @@ export type iSendMessage = {
     sms: string
     from?: string
     type?: string
-    channel?: string     // 'dnd' | 'whatsapp' | 'generic'
+    channel?: iChannel
     api_key?: string
 }
 export type iSendBulkMessage = {
@@ -18,7 +21,7 @@ export type iSendBulkMessage = {
     sms: string
     from?: string
     type?: string
-    channel?: string     // 'dnd' | 'whatsapp' | 'generic'
+    channel?: iChannel
     api_key?: string
 }
 
@@ -32,8 +35,8 @@ export type iSendToken = {
     to: string
     message_text: string
     from?: string
-    message_type?: string    //  "NUMERIC" "ALPHANUMERIC
-    channel?: string     //  dnd, WhatsApp, generic or email
+    message_type?: iMessageType
+    channel?: iChannel
     pin_attempts?: number
     pin_time_to_live?: number
     pin_length?: number
@@ -42,7 +45,7 @@ export type iSendToken = {
 }
 export type iInAppToken = {
     phone_number: number
-    pin_type?: string    //  "NUMERIC" "ALPHANUMERIC
+    pin_type?: iMessageType
     pin_attempts?: number
     pin_time_to_live?: number
     pin_length?: number
