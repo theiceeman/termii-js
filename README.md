@@ -1,10 +1,10 @@
-# termii-js
+# ts-termii
 A TS sdk for [Termii API](http://developer.termii.com/docs/)
 <br><br>
 ## :dart: Usage
 ```bash
 # Installation
-$ yarn add termii-js
+$ yarn add ts-termii
 ```
 
 - Send sms
@@ -34,7 +34,7 @@ termii.inAppToken()
 ```
 <br><br>
 ## :hammer: Contributions
-You are welcome to contribute, or suggest changes to this sdk. Just send an Email to this address _okorieebube1@gmail.com_ , for immediate response.
+You are welcome to contribute, or suggest changes to this sdk. Just send a mail to this address _okorieebube1@gmail.com_ , for immediate response.
 <br>
 ```bash
 # fork and clone the forked project

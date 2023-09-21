@@ -1,13 +1,21 @@
 {
-  "name": "termii-js",
-  "version": "1.0.0",
+  "name": "ts-termii",
+  "version": "0.0.1",
+  "description": "A TS sdk for Termii API.",
   "main": "termii.js",
+  "keywords": [
+    "sms",
+    "messaging",
+    "otp"
+  ],
+  "repository": "https://github.com/theiceeman/termii-js ",
+  "author": "<Ebube Okorie> okorieebube1@gmail.com",
+  "license": "MIT",
   "scripts": {
     "dev": "npx tsc && node ./build/termii",
     "compile": "npx tsc",
     "test": "npx jest"
   },
-  "license": "MIT",
   "dependencies": {
     "axios": "^1.5.0",
     "dotenv": "^16.3.1"
